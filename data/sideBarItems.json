@@ -1,0 +1,14 @@
+[
+    {
+        "path" : "rooms.html",
+        "image" : "images/rooms.png"
+    },
+        {
+        "path" : "dives.html",
+        "image" : "images/dive-site.png"
+    },
+        {
+        "path" : "foods.html",
+        "image" : "images/food.png"
+    }
+]

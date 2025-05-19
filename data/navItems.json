@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "Home",
+        "path" : "index.html",
+        "isSelected" : "true",
+        "isActive" : "true"
+    },
+    {
+        "name" : "Travel",
+        "path" : "travel.html"
+    },
+    {
+        "name" : "Rooms",
+        "path" : "rooms.html"
+    },
+    {
+        "name" : "Meals",
+        "path" : "meals.html"
+    },
+    {
+        "name" : "News",
+        "path" : "news.html"
+    },
+    {
+        "name" : "About",
+        "path" : "about.html"
+    },
+    {
+        "name" : "Contact",
+        "path" : "contact.html"
+    }
+]
