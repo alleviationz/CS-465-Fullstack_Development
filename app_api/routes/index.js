@@ -3,14 +3,16 @@ const router = express.Router();
 
 const tripsController = require("../controllers/trips");
 
-// GET index endpoint for trips
+// index endpoint for trips
 router
     .route("/trips")
-    .get(tripsController.tripsList);
+    .get(tripsController.tripsList) // GET method routes tripsList
+    .post(tripsController.tripsAddTrip); // POST method adds a Trip
 
-// GET method routes tripsFindByCode - requires code parameter
+// tripsCode method routes tripsFindByCode - requires code parameter
 router
     .route("/trips/:tripCode")
-    .get(tripsController.tripsFindByCode);
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);  //PUT method updates a trip
 
 module.exports = router;
