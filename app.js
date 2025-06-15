@@ -11,7 +11,7 @@ require('./app_api/config/passport');
 
 
 // routers
-var indexRouter = require('./app_server/routes/');
+var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var travelRouter = require('./app_server/routes/travel');
 var aboutRouter = require('./app_server/routes/about');
@@ -51,7 +51,7 @@ app.use('/api', (req, res, next) => {
   next();
 });
 
-app.use('/index', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
 app.use('/about', aboutRouter);

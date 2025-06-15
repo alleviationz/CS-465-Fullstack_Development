@@ -1,32 +1,44 @@
 [
     {
         "name" : "Home",
-        "path" : "index.html",
+        "path" : "../",
         "isSelected" : "true",
         "isActive" : "true"
     },
     {
         "name" : "Travel",
-        "path" : "travel.html"
+        "path" : "/travel",
+        "isSelected" : "false",
+        "isActive" : "false"
     },
     {
         "name" : "Rooms",
-        "path" : "rooms.html"
+        "path" : "/rooms",
+        "isSelected" : "false",
+        "isActive" : "false"
     },
     {
         "name" : "Meals",
-        "path" : "meals.html"
+        "path" : "/meals",
+        "isSelected" : "false",
+        "isActive" : "false"
     },
     {
         "name" : "News",
-        "path" : "news.html"
+        "path" : "/news",
+        "isSelected" : "false",
+        "isActive" : "false"
     },
     {
         "name" : "About",
-        "path" : "about.html"
+        "path" : "/about",
+        "isSelected" : "false",
+        "isActive" : "false"
     },
     {
         "name" : "Contact",
-        "path" : "contact.html"
+        "path" : "/contact",
+        "isSelected" : "false",
+        "isActive" : "false"
     }
 ]
