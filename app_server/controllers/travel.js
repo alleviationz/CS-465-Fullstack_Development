@@ -1,3 +1,6 @@
+var fs = require('fs');
+var navItems = JSON.parse(fs.readFileSync('./data/navItems.json','utf8'));
+
 const tripsEndpoint = "http://localhost:3000/api/trips";
 const options = {
     method : "GET",
@@ -20,7 +23,7 @@ const travel = async function(req, res, next) {
                     message = "No trips exist in our database!";
                 }
             }
-            res.render("travel", { title : "Travlr Getaways", trips : json, message });
+            res.render("travel", { title : "Travlr Getaways", trips : json, message, navItems });
         })
         .catch((err) => res.status(500).send(err.message));
 };

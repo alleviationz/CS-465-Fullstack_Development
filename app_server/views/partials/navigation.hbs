@@ -1,0 +1,13 @@
+<div id="navigation">
+    <ul>
+{{#each navItems}}
+    {{#if this.route}}
+        <li class="selected">
+    {{else}}
+        <li>
+    {{/if}}
+            <a href={{this.path}}>{{this.name}}</a>
+        </li>
+{{/each}}
+    </ul>
+</div>
