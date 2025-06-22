@@ -26,7 +26,8 @@ router
 router
     .route("/trips/:tripCode")
     .get(tripsController.tripsFindByCode)
-    .put(authenticateJWT, tripsController.tripsUpdateTrip);  //PUT method updates a trip
+    .put(authenticateJWT, tripsController.tripsUpdateTrip)  //PUT method updates a trip
+    .delete(authenticateJWT, tripsController.tripsDeleteTrip);   // DELETE method deletes a trip
 
 
 // method to authenticate JWT

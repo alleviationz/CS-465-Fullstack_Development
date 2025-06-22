@@ -18,7 +18,6 @@ export class Login implements OnInit {
   submitted = false;
 
   credentials = {
-    name: '',
     email: '',
     password: ''
   }
@@ -35,7 +34,7 @@ export class Login implements OnInit {
 
   public onLoginSubmit(): void {
     this.formError = '';
-    if (!this.credentials.name || !this.credentials.email || !this.credentials.password) {
+    if (!this.credentials.email || !this.credentials.password) {
       this.formError = "All fields are required";
       this.router.navigateByUrl("#"); // return to login
     } else {
@@ -45,7 +44,6 @@ export class Login implements OnInit {
 
   private doLogin(): void {
     let newUser = {
-      name: this.credentials.name,
       email: this.credentials.email,
     } as User;
 

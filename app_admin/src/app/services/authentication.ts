@@ -80,7 +80,7 @@ export class Authentication {
   }
 
   // register method using tripData register, subscribe to result, process Observable if form data valid
-  public registration(user: User, password: string): void {
+  public register(user: User, password: string): void {
     this.tripData.register(user, password)
       .subscribe({
         next: (value: any) => {
