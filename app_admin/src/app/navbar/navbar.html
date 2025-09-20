@@ -13,18 +13,9 @@
         </div>
     </div>
     <div class="navbar-end ">
-        <ul style="list-style-type: none">
-            <li>
-                <a routerLink="login" *ngIf="!isLoggedIn()" class="nav-item">
-                    <span class="has-icon-left">Log In</span>
-                </a>
-            </li>
-            <!-- <li>
-                <a routerLink="register" *ngIf="!isLoggedIn()" class="nav-item">
-                    <span class="has-icon-left">Register</span>
-                </a>
-            </li> -->
-        </ul>
+        <a routerLink="login" *ngIf="!isLoggedIn()" class="nav-item">
+            <span class="has-icon-left">Log In</span>
+        </a>
         <a class="nav-item active" (click)="onLogout()"
             *ngIf="isLoggedIn()">
             <span class="has-icon-left ">Log Out</span>
