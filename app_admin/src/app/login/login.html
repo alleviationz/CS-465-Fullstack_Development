@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-12 col-md-8">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div role="alert" *ngIf="formError" class="alert alert-danger">
+                    {{ formError }}
+                </div>
+                
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" formControlName="email"
+                placeholder="Enter your email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors
+                    }">
+                <div *ngIf="submitted && f['email'].errors">
+                    <div *ngIf="f['email'].errors?.['required']">
+                        Email is required
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" formControlName="password"
+                placeholder="enter password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors
+                    }">
+                <div *ngIf="submitted && f['password'].errors">
+                    <div *ngIf="f['password'].errors?.['required']">
+                        Password is required
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-info">Login</button>
+        </form>
+        <br>
+
+        <nav>
+            <ul class="navbar-nav">
+                <a routerLink="register" class="nav-item" (click)="goToRegister()" onmouseover="this.style.cursor='pointer'">
+                    <span class="has-icon-left">New Account?</span>
+                </a>
+            </ul>
+        </nav>
+    </div>
+</div>
